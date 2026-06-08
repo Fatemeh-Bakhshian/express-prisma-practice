@@ -25,15 +25,15 @@ This is a task to build a simple blog API with Node.js, Express, and Prisma.
 
 ## env file
 
-PORT= 3000
-JWT_SECRET_CODE
-JWT_EXPIRES_IN
-DATABASE_URL="file:./dev.db"
+- PORT= 3000
+- JWT_SECRET_CODE
+- JWT_EXPIRES_IN
+- DATABASE_URL="file:./dev.db"
 
 ---
 
-in order to run the project :
-step 1: npm i
-step 2: npm start
-then you can see the Swagger documentation on :
-http://localhost:3000/api-docs
+- in order to run the project :
+- step 1: npm i
+- step 2: npm start
+- then you can see the Swagger documentation on :
+- http://localhost:3000/api-docs
