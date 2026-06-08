@@ -1,0 +1,28 @@
+generator client {
+    provider = "prisma-client-js"
+    output   = "../prisma/generated"
+}
+
+datasource db {
+    provider = "sqlite"
+}
+
+model user {
+    id        String  @id @default(uuid())
+    name      String
+    email     String  @unique
+    password  String
+    role      String  @default("user")
+    blogs     blog[]
+    is_active Boolean @default(true)
+}
+
+model blog {
+    id        String  @id @default(uuid())
+    title     String
+    content   String
+    ImageUrl  String?
+    writer_id String
+    writer    user    @relation(fields: [writer_id], references: [id])
+    is_active Boolean @default(true)
+}
